@@ -1,0 +1,16 @@
+{
+  "name": "henry-latepay",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@stripe/stripe-js": "^8.11.0",
+    "@supabase/supabase-js": "^2.99.2",
+    "stripe": "^20.4.1"
+  }
+}
