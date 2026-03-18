@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { use } from 'react'
 import { STATE_RULES, getEscalationLevel, getEscalationConfig } from '@/lib/penalties'
 
 // Compute a date N days ago as ISO string
@@ -96,8 +95,8 @@ function calculateLive(amount: number, dueDateStr: string, state: string, nowMs:
   }
 }
 
-export default function DebtorPage({ params }: { params: Promise<{ token: string }> }) {
-  const { token } = use(params)
+export default function DebtorPage({ params }: { params: { token: string } }) {
+  const { token } = params
   const invoice = DEMO_DATA[token]
   const [nowMs, setNowMs] = useState(Date.now())
   const [copied, setCopied] = useState(false)
